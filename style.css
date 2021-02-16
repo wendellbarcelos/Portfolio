@@ -1,0 +1,140 @@
+:root {
+    --color-darkblue: #1F618D;
+    --verde-agua: #1AABAB;
+}
+
+* {
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+body {
+    box-sizing: border-box;
+}
+
+.menu {
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
+}
+
+.topo {
+    border-bottom: 10px solid black;
+    padding: 0 10px;
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    height: 80px;
+    margin: auto;
+    background: #3498db;
+}
+
+header {
+    position: relative;
+}
+
+header img {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: 20px;
+    top: 10px;
+    background-size: cover;
+}
+
+
+header a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    line-height: 25px;
+    padding: 10px;
+    transition: 400ms;
+    font-family: 'Roboto', sans-serif;
+}
+
+header a:hover {
+    color: var(--color-darkblue);
+}
+
+.topo button {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: var(--color-darkblue);
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    box-shadow: 3px 3px black;
+    transition: 400ms;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.topo button:hover {
+    color: #1F618D;
+    background-color: #1AABAB;
+}
+
+.layout {
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
+}
+
+.card {
+    position: absolute;
+    width: 674px;
+    height: 184px;
+    background: var(--color-darkblue);
+    left: 300px;
+    top: 205px;
+    box-shadow: 5px 5px black;
+}
+
+.card h1 {
+    color: var(--verde-agua);
+    font-family: 'Press Start 2P', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 40px;
+    text-shadow: 3px 3px black;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.card h2 {
+    color: #fff;
+    font-family: 'Press Start 2P', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 35px;
+    text-shadow: 3px 3px black;
+    text-align: center;
+}
+
+.card-button {
+    position: absolute;
+    width: 674px;
+    height: 60px;
+    top: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-button button {
+    width: 225px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: normal;
+    font-family: 'Press Start 2P', cursive;
+    padding: 10px 30px;
+    background-color: var(--color-darkblue);
+    color: #fff;
+    margin: 20px;
+    box-shadow: 3px 3px black;
+}
