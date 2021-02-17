@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
@@ -14,29 +15,37 @@
 </head>
 
 <body>
-    <header class="menu">
-        <div class="topo">
-            <img src="./assets/logo.svg" alt="">
-            <nav>
-                <a href="">Skills</a>
-                <a href="">Projetos</a>
-                <a href="">Sobre</a>
-                <a href="">Contato</a>
-            </nav>
-            <button>Download CV</button>
-        </div>
-    </header>
-    <main>
-            <div class="layout"></div>
-            <div class="card">
-                <h1>Wendell Barcelos</h1>
-                <h2>FrontEnd Developer</h2>
-                <div class="card-button">
-                    <button>Download CV</button>
-                    <button>Contatos</button>
+    <div id="home-page">
+
+        <div class="content">
+            <header>
+
+                <input type="checkbox" id="control-nav" />
+                <label for="control-nav" class="control-nav"></label>
+                <label for="control-nav" class="control-nav-close"></label>
+
+                <img src="./assets/logo.svg" alt="">
+                <nav class="fR">
+                    <a href="">Skills</a>
+                    <a href="">Projetos</a>
+                    <a href="">Sobre</a>
+                    <a href="">Contatos</a>
+                </nav>
+                <button>Download CV</button>
+            </header>
+            <main>
+                <div class="layout"></div>
+                <div class="card">
+                    <h1>Wendell Barcelos</h1>
+                    <h2>FrontEnd Developer</h2>
+                    <div class="card-button">
+                        <button>Projetos</button>
+                        <button>Contatos</button>
+                    </div>
                 </div>
-            </div>
-    </main>
+            </main>
+        </div>
+    </div>
 </body>
 
 </html>

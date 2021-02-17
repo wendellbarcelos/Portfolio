@@ -11,20 +11,20 @@
 
 body {
     position: relative;
-    width: 100%;
-    max-width: 1440px;
-    margin: auto;
     box-sizing: border-box;
-}
-
-.menu {
-    position: relative;
     width: 100%;
     max-width: 1440px;
-    margin: auto;
+    margin: 0 auto;
 }
 
-.topo {
+.content {
+    position: relative;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+
+header {
     position: relative;
     border-bottom: 10px solid black;
     padding: 0 10px;
@@ -32,12 +32,7 @@ body {
     display: flex;
     justify-content: flex-end;
     height: 80px;
-    margin: auto;
     background: #3498db;
-}
-
-header {
-    position: relative;
 }
 
 header img {
@@ -57,18 +52,18 @@ nav {
 nav a {
     text-decoration: none;
     color: #fff;
-    font-size: 20px;
+    font-size: 15px;
     line-height: 25px;
     padding: 10px;
     transition: 400ms;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Press Start 2P', cursive;
 }
 
 header a:hover {
     color: var(--color-darkblue);
 }
 
-.topo button {
+button {
     padding: 10px;
     border-radius: 5px;
     background-color: var(--color-darkblue);
@@ -81,7 +76,7 @@ header a:hover {
     cursor: pointer;
 }
 
-.topo button:hover {
+button:hover {
     color: #1F618D;
     background-color: #1AABAB;
 }
@@ -155,45 +150,127 @@ header a:hover {
     background-color: #1AABAB;
 }
 
-@media (max-width: 800px) {
-    .layout { 
-        height: 80vh;
-    }
-    
-    .card {
-        left: 65px;
-    }
+input[type=checkbox] {
+    display:none;
 }
 
-@media (max-width: 430px) {
+
+
+@media screen and (max-width: 800px) {
     .layout { 
         height: 40vh;
     }
 
-    .topo img {
-        left: 40px;
+    header button {
+        margin-right: 5px;
+    }
+
+    header img {
+        left: 45%;
+    }
+
+    .content nav {
+        margin-right: 0;
+    }
+
+    .content a {
+        color: var(--color-darkblue);
+        font-size: 18px;
+        margin: 10px;
+        font-family: 'Press Start 2P', cursive;;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .card {
-        height: 90px;
+        height: 100px;
         width: 90%;
         left: 22px;
     }
 
     .card h1 {
         font-size: 22px;
-        margin-top: 5px;
+        margin-top: 10px;
+        
     }
 
     .card h2 {
         font-size: 18px;
     }
 
-    .topo nav {
-        display: none;
-    }
-
     .card-button {
         display: none;
     }
+
+
+    input[type=checkbox] {
+        display:none;
+    }
+
+    header .control-nav {
+        position: absolute;
+        left: 40px;
+        top: 32px;
+        display: block;
+        width: 30px;
+        padding: 5px 0;
+        border: solid #04385A;
+        border-width: 3px 0;
+        z-index: 2;
+        cursor: pointer;
+    }
+    
+    header .control-nav:before {
+        content: "";
+        display: block;
+        height: 3px;
+        background: #04385A;
+    }
+    
+    header .control-nav-close {
+        position: fixed;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        display: block;
+        z-index: 1;
+        background: rgba(0,0,0,0.4);
+        -webkit-transition: all 500ms ease;
+        transition: all 500ms ease;
+        -webkit-transform: translate(100%, 0);
+        -ms-transform: translate(100%, 0);
+        transform: translate(100%, 0);
+    }
+    
+    header nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 250px;
+        border-left: 1px solid #ccc;
+        background: #CDEBFF;
+        overflow-x: auto;
+        z-index: 2;
+        -webkit-transition: all 500ms ease;
+        transition: all 500ms ease;
+        -webkit-transform: translate(100%, 0);
+        -ms-transform: translate(100%, 0);
+        transform: translate(100%, 0);
+    }
+
+    #control-nav:checked ~ .control-nav-close {
+        -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+        
+    #control-nav:checked ~ nav {
+        -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+    
 }
